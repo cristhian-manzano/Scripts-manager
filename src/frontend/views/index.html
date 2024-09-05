@@ -1,0 +1,45 @@
+<!-- src/frontend/views/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bash Script Manager</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <div class="loader-overlay" id="loader-overlay">
+      <div class="loader-card">
+        <div class="loader"></div>
+        <div class="loader-text">Executing <span id="loader-script-name"></span>...</div>
+      </div>
+    </div>
+
+    <div class="container" id="main-container">
+      <h1>Bash Script Manager</h1>
+      <div class="file-input-container">
+        <button class="choose-file-button" onclick="chooseFile()">Choose File</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Script Name</th>
+              <th>Absolute Path</th>
+              <th>Last Executed</th>
+              <th>Action</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="scripts-list"></tbody>
+        </table>
+      </div>
+
+      <h2>Output:</h2>
+      <pre id="output"></pre>
+    </div>
+
+    <script src="../scripts/renderer.js"></script>
+  </body>
+</html>

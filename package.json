@@ -4,9 +4,9 @@
   "description": "A simple Electron app to manage and run bash scripts",
   "main": "main.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "start": "NODE_ENV=development electron-forge start",
+    "build": "NODE_ENV=production electron-forge package",
+    "make": "NODE_ENV=production electron-forge make"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"

@@ -3,6 +3,6 @@ module.exports = {
   window: {
     width: 800,
     height: 600,
-    devTools: true, // Set to false to disable DevTools in production
+    devTools: process.env.NODE_ENV === 'development', // Enable DevTools only in development mode
   },
 };

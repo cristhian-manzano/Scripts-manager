@@ -17,7 +17,10 @@ function createWindow() {
   });
 
   mainWindow.loadFile('src/frontend/views/index.html');
-  mainWindow.webContents.openDevTools();
+
+  if (config.window.devTools) {
+    mainWindow.webContents.openDevTools();
+  }
 }
 
 app.whenReady().then(createWindow);
